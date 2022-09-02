@@ -68,3 +68,27 @@ function salam1() {
 }
 
 salam1()();
+
+// currying
+function preCurrying(number1, number2) {
+  return number1 * number2;
+}
+console.log(preCurrying(2, 3));
+console.log(preCurrying(2, 8));
+
+function postCurrying(number1) {
+  return function func2(number2) {
+    return number1 * number2;
+  };
+}
+console.log(postCurrying(2)(3));
+console.log(postCurrying(2)(8));
+
+// recursive function
+function countdown(n) {
+  console.log(n);
+  if (n > 1) {
+    countdown(n - 1);
+  }
+}
+countdown(3);
