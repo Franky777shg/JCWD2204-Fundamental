@@ -52,3 +52,8 @@ let resultArr11 = arr11.map((value) => {
   return (value * 3) / 2;
 });
 console.log(resultArr11);
+
+let arr12 = [1, 2, 3];
+for (let element of arr12) {
+  console.log(element);
+}
