@@ -8,9 +8,9 @@ function detectNumber(arr) {
   //   }, Average: ${arr.reduce((a, b) => a + b) / arr.length}`;
 
   // without sort function
-  let lowest = arr[0];
-  let highest = arr[0];
-  let total = 0;
+  let lowest = arr[0]; // 1
+  let highest = arr[0]; // 3
+  let total = 0; // 1
 
   arr.forEach((element) => {
     if (element < lowest) {
