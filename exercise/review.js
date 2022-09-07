@@ -11,3 +11,7 @@ console.log(obj["a"]);
 
 let boo = true;
 console.log(!boo);
+
+let temp = {};
+temp.david = "name";
+console.log(temp);

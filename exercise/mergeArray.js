@@ -1,5 +1,5 @@
 function myFunc(arr1, arr2) {
-  //write code here
+  // write code here
   // copy isi dari arr1 ke dalam merged
   let merged = [...arr1];
 
@@ -9,7 +9,7 @@ function myFunc(arr1, arr2) {
 
     // looping array merged
     for (let j = 0; j < merged.length; j++) {
-      // cek value dari objek.name
+      // cek value property name dari 2 object yang dibandingkan
       if (arr2[i].name === merged[j].name) {
         // kalau datanya sama, maka dataExist diubah menjadi true
         dataExist = true;
