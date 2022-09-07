@@ -8,3 +8,6 @@ let obj = {
 };
 
 console.log(obj["a"]);
+
+let boo = true;
+console.log(!boo);
