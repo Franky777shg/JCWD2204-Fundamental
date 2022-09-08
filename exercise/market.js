@@ -36,9 +36,15 @@ class Transaction {
   }
 
   checkout(moneyFromUser) {
-    this.totalTrans();
-    console.log(`Your money = ${moneyFromUser}`);
-    console.log(`Here is the return = ${moneyFromUser - this.getTotalTrans()}`);
+    if (moneyFromUser < this.getTotalTrans()) {
+      throw new Error("Money is not enough");
+    } else {
+      this.totalTrans();
+      console.log(`Your money = ${moneyFromUser}`);
+      console.log(
+        `Here is the return = ${moneyFromUser - this.getTotalTrans()}`
+      );
+    }
   }
 }
 
@@ -58,4 +64,4 @@ transaction.addToCart(listProduct[0], 5);
 transaction.addToCart(listProduct[1], 5);
 // transaction.addToCart(listProduct[1], 5);
 // transaction.totalTrans();
-transaction.checkout(200000);
+transaction.checkout(10000);
