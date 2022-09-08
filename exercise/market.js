@@ -9,10 +9,14 @@ class Transaction {
   cart = [];
 
   addToCart(item, qty) {
-    // menambahkan property quantity ke dalam object product
-    item.quantity = qty;
-    // menmabahkan product ke dalam array cart
-    this.cart.push(item);
+    if (qty <= 0) {
+      throw new Error("Quantity cant be 0");
+    } else {
+      // menambahkan property quantity ke dalam object product
+      item.quantity = qty;
+      // menmabahkan product ke dalam array cart
+      this.cart.push(item);
+    }
   }
 
   getTotalTrans() {
@@ -27,7 +31,7 @@ class Transaction {
   totalTrans() {
     this.cart.forEach((item, index) => {
       console.log(
-        `${index + 1}. ${item.name} x ${item.quantity} = ${
+        `${index}. ${item.name} x ${item.quantity} = ${
           item.quantity * item.price
         }`
       );
@@ -63,5 +67,5 @@ transaction.addToCart(listProduct[3], 3);
 transaction.addToCart(listProduct[0], 5);
 transaction.addToCart(listProduct[1], 5);
 // transaction.addToCart(listProduct[1], 5);
-// transaction.totalTrans();
-transaction.checkout(10000);
+transaction.totalTrans();
+// transaction.checkout(10000);
