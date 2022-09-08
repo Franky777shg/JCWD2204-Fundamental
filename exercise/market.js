@@ -16,14 +16,19 @@ class Transaction {
   }
 
   totalTrans() {
+    let total = 0;
     this.cart.forEach((item, index) => {
       console.log(
         `${index + 1}. ${item.name} x ${item.quantity} = ${
           item.quantity * item.price
         }`
       );
+      total += item.quantity * item.price;
     });
+    console.log(`Total = ${total}`);
   }
+
+  checkout(moneyFromUser) {}
 }
 
 let listProduct = [
