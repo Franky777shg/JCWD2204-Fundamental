@@ -17,3 +17,5 @@ console.log(myMap);
 for (let [key, value] of myMap) {
   console.log(`${key} = ${value}`);
 }
+
+console.log(myMap.get("David"));
