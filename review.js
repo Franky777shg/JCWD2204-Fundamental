@@ -39,3 +39,14 @@ function a() {
 }
 
 console.log(a()().age[2]);
+
+let linkedList = {
+  element: "A",
+  next: {
+    element: "New Value",
+    next: {
+      element: "C",
+      next: null,
+    },
+  },
+};

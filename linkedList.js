@@ -27,6 +27,8 @@ class LinkedList {
 
       current.next = node;
     }
+
+    this.size += 1;
   }
 
   printList() {
@@ -133,3 +135,17 @@ class LinkedList {
     return -1;
   }
 }
+
+let linkedList = new LinkedList();
+console.log(linkedList);
+linkedList.add("A");
+linkedList.add("B");
+linkedList.add("C");
+linkedList.add("D");
+console.log(linkedList);
+linkedList.insertAt("New Value", 2);
+console.log(linkedList);
+linkedList.removeElement("B");
+console.log(linkedList);
+linkedList.removeAt(3);
+console.log(linkedList);
