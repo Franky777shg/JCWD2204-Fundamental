@@ -69,6 +69,30 @@ class LinkedList {
     }
   }
 
+  removeAt(index) {
+    if (index < 0 || index >= this.size) {
+      return console.log("Please enter a valid index");
+    } else {
+      let curr = this.head;
+      let prev = curr;
+
+      if (index === 0) {
+        this.head = curr.next;
+      } else {
+        for (let i = 0; i < index; i++) {
+          prev = curr;
+          curr = curr.next;
+        }
+
+        prev.next = curr.next;
+      }
+
+      this.size -= 1;
+
+      return curr.element;
+    }
+  }
+
   removeElement(element) {
     let current = this.head;
     let prev = null;
