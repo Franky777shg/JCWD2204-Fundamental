@@ -1,0 +1,23 @@
+{
+  "name": "Fundamental",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Franky777shg/JCWD2204-Fundamental.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Franky777shg/JCWD2204-Fundamental/issues"
+  },
+  "homepage": "https://github.com/Franky777shg/JCWD2204-Fundamental#readme",
+  "dependencies": {
+    "jest": "^29.0.3"
+  }
+}
